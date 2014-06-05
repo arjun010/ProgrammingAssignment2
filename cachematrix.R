@@ -1,4 +1,4 @@
-#Creates a special "matrix" which is a list containing functions to set and get the matrix and its #inverse.
+#Creates a special "matrix" which is a list containing functions to set and get the matrix and its inverse.
 makeCacheMatrix <- function(x = matrix()) {
   m<-NULL
   set<-function(y){
@@ -13,7 +13,7 @@ makeCacheMatrix <- function(x = matrix()) {
        getmatrix=getmatrix)
 }
 
-#The following function computes the inverse of the matrix created using the above function. The #special feature is that it checks if the inverse is pre-computed then it does not repeat the #computation and uses the cached result
+#The following function computes the inverse of the matrix created using the above function. The special feature is that it checks if the inverse is pre-computed then it does not repeat the computation and uses the cached result
 cacheSolve <- function(x=matrix(), ...) {
   m<-x$getmatrix()
   if(!is.null(m)){
